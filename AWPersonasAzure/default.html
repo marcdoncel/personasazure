@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>AWPersonasAzure</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+    <script src="js/MobileServices.min.js"></script>
+    <script src="js/Modelo.js"></script>
+    <script src="js/FuncionalidadesAzure.js"></script>
+    <script src="js/Acciones.js"></script>
+
+    <!-- AWPersonasAzure references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/default.js"></script>
+    <script src="/js/navigator.js"></script>
+    
+
+</head>
+    <body>
+        <!--    flyout    -->
+        <div id="AltaPersFly" data-win-control="WinJS.UI.Flyout">
+            <input type="text" id="txtNomAddPers" placeholder="Nombre persona" /><br />
+            <input type="text" id="txtEdadAddPers" placeholder="Edad persona" /><br />
+            <button type="button" id="btnAddBlocFly">Añadir</button>
+            <button type="button" id="btnCerFly">Cerrar</button>
+        </div>
+        <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/home/home.html'}"></div>
+        <div id="appbar" data-win-control="WinJS.UI.AppBar">
+            <button data-win-control="WinJS.UI.AppBarCommand"
+                    data-win-options="{id:'cmdAddPers', label:'Nueva persona', icon:'add'}"
+                    type="button"></button>
+            <button data-win-control="WinJS.UI.AppBarCommand"
+                    data-win-options="{id: 'cmdSearch', label:'Buscar', icon: 'search'}"
+                    type="button"></button>
+        </div>
+</body>
+</html>
